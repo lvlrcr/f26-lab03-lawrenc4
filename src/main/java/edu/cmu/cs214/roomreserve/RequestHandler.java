@@ -27,6 +27,7 @@ public class RequestHandler {
             return "ERROR: end must be after start";
         }
 
+        // HERE!!!!
         List<long[]> existing = store.slotsFor(room, date);
         for (long[] slot : existing) {
             if (startMinutes < slot[1] && slot[0] < endMinutes) {
